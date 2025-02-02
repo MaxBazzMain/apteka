@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="BaranovaPolina 1isp_21" content="width=device-width, initial-scale=1.0">
     <title>Аптека<3</title>
@@ -9,7 +10,7 @@
     <link rel="apple-touch-icon"  sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png"  sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png"  sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/style/site.webmanifest"> 
+    <!-- <link rel="manifest" href="/style/site.webmanifest">  -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
       <div class="head-content">
 
        <div class="drag-text-head-block">
-        <a href="./index.html" class="shop-head"><img class="image-head-shop" src="./assets/images/icon/main-drag-icon.png"/>Лекарства</a>
+        <a href="./index.php" class="shop-head"><img class="image-head-shop" src="./assets/images/icon/main-drag-icon.png"/>Лекарства</a>
        </div>
 
        <div class="drag-text-head-block">
@@ -32,12 +33,7 @@
 
        
        <div class="drag-text-head-block">
-        <a href="./login.html" class="shop-head"><img class="image-head-shop current" src="./assets/images/icon/account-icon.png"/>Аккаунт</a>
-       </div>
-
-       <div class="drag-text-head-block">
-        <img class="image-head-shop" src="./assets/images/icon/korzina-icon.png"/>
-        <a class="shop-head">Корзина</a>
+        <a href="./login.php" class="shop-head"><img class="image-head-shop current" src="./assets/images/icon/account-icon.png"/>Аккаунт</a>
        </div>
        
       </div>
@@ -57,7 +53,7 @@
             </div> -->
       
     <div class="full-container">
-        <form class="login-container" action="./php/login.php" method="post">
+        <form class="login-container" action="login_script.php" method="post">
           <input class="title-text-container" type="text" placeholder="login" name="login">
           <input class="title-text-container" type="password" placeholder="password"name="pass">
           <button type="submit">Войти</button>

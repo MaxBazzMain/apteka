@@ -17,16 +17,16 @@ if (empty($login) || empty($pass) || empty($repeatpass) || empty($email)){
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 echo "Такой пользователь уже зарегестрирован";
-                header("Location:../login.html");
+                header("Location:../login.php");
             } else {
                 $sql = "INSERT INTO `users` (login,pass,email) VALUES ('$login', '$pass', '$email')";
                 if ($conn -> query($sql) === TRUE){
                 echo "Успешная регистрация";
-                header("Location:../index.html");
+                header("Location:../index.php");
                 }
                 else {
                     echo "Ошибка: " . $conn->error;
-                    header("Location:../login.html");
+                    header("Location:../login.php");
                 }
             }
            
