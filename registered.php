@@ -12,14 +12,14 @@
     <link rel="icon" type="image/png"  sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png"  sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <!-- <link rel="manifest" href="/style/site.webmanifest">  -->
-
+    <script src="./script/jquery-3.7.1.slim.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
   <body>
 
-  
+ 
         <div class="head-body">
 
           <div class="head-content">
@@ -65,32 +65,27 @@
 
             <a class="body-main-text">Добро пожаловать, <? echo "$user";?>!</a>
 
-            <div class="container-body">   
-              
-            
+            <div class="container-body">              
             
             <?require_once('./php/medicine_main_page.php');?>
             <?foreach ($midicinItems as $midicinItem):?>
 
-              <div class="medicine_container" data-id="<?=$midicinItem['id']?>">
+              <div class="medicine_container" <? $data_id=$midicinItem['id']?>>
                 <img class="image-container" src="<?=$midicinItem['medicine_photo']?>"/>
                 <a class="title-text-container"><?=$midicinItem['medicine_name']?></a>
                 <a class="text-container"><?=$midicinItem['medicine_dose']?> мг, <?=$midicinItem['medicine_quantity']?> шт</a>
                 <a class="text-summa"><?=$midicinItem['medicine_price']?> ₽</a>
-                 
+                
+
                 <form action="./php/buy.php" method="post">
-                <button onclick="sendData()">Купить</button>
+                
+                <label>
+                <input type="hidden"  name="midicinItem_Id" value="<?php echo $midicinItem['id']?>" />
+                <input type="submit"  name="Submit" value='Купить' />
+                </label>
                 </form>
 
-                <script>
-                  function sendData() {
-                    fetch('./php/buy.php', {
-                    method: 'POST',
-                    body: 'midicinItem=' + $midicinItem['id']
-                  }
-                    )
-                  }
-                </script>
+                
 
               </div>  
 

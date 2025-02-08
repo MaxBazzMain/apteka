@@ -46,12 +46,27 @@
         </div>
 
         <div class="all-body">
+          <div class="main-block">
+            <a class="body-main-text">Заказанные товары</a>
+          </div>
 
         <div class="body-content">
-                <div class="main-block">
-                  <a class="body-main-text">Заказанные товары</a>
-                </div>
-            </div>
+                
+
+          <div class="container-body">
+            <?require_once('./php/basket_out.php');?>
+            <?foreach ($midicinItems as $midicinItem):?>
+
+              <div class="medicine_container" <? $data_id=$midicinItem['id']?>>
+                <img class="image-container" src="<?=$midicinItem['medicine_photo']?>"/>
+                <a class="title-text-container"><?=$midicinItem['medicine_name']?></a>
+                <a class="text-summa"><?=$midicinItem['medicine_price']?> ₽</a>
+              </div>  
+            <?endforeach?>
+        
+          </div>
+
+        </div>
       
         
 
