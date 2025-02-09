@@ -17,25 +17,11 @@ if(empty($login) || empty($pass))
     {
         while($row = $result->fetch_assoc()){
             $user = $row['login'];
-            // putenv("PHP_current_user = $user");
-           // return $user; 
-            //header("Location:../registered.php");
-            //echo "Добро пожаловать, " . $user,'!';
-            // $temp = getenv('PHP_current_user');
-            echo $user;
+            // echo $user;
             session_start();
             $_SESSION['login'] = $row['login'];
             $_SESSION['password'] = $row['pass'];
-            
-            // echo getcwd() . "\n";
-            //chdir('..');
-            // echo getcwd() . "\n";
-            // include('registered.php');
-            
             header("Location:./registered.php");
-           
-            
-
         }
     } else {
         echo "Пользователь не зарегестрирован или пароль неверен";

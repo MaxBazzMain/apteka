@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon"  sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png"  sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png"  sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <!-- <link rel="manifest" href="/style/site.webmanifest">  -->
+    <link rel="manifest" href="/style/site.webmanifest"> 
     <script src="./script/jquery-3.7.1.slim.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

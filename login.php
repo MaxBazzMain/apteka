@@ -40,17 +40,6 @@
     </div>
 
 <div class="all-body">
-
-     <!-- <div class="body-content">
-                <div class="main-block">
-                  <a class="body-main-text">Лекарства</a>
-                </div>
-                <div class="search-block">
-                  <img class="search-icon" src="./assets/images/icon/3-icon.png"/>
-                  <a class="search-text">Поиск</a>
-                  <img class="search-icon-1" src="./assets/images/icon/search-icon.png"/>
-                </div>
-            </div> -->
       
     <div class="full-container">
         <form class="login-container" action="login_script.php" method="post">
@@ -68,19 +57,14 @@
         </form>
   
     </div>
-
-   
-
   
   </div>
-
-
 
   <div class="footer">
     <a class="footer-text">Баранова Полина 2024 1ИСП-21</a>
   </div>
 
-    
-
   </body>
+
+  
 </html>
